@@ -25,7 +25,7 @@ const Home = () => {
   className="w-full h-full object-cover opacity-20"
 >
   <source
-    src="/ai-brain.mp4"
+    src="/public/ai-brain.mp4"
     type="video/mp4"
   />
   Your browser does not support the video tag.
