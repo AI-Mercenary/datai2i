@@ -36,14 +36,18 @@ export default function Home() {
       {/* Video Background */}
       <section className="relative h-screen overflow-hidden">
         <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          aria-label="Futuristic AI background animation"
-          className="w-full h-full object-cover opacity-20"
-        >
+  ref={videoRef}
+  autoPlay
+  loop
+  muted
+  playsInline
+  poster="/fallback.jpg"
+  className="w-full h-full object-cover opacity-20"
+>
+  <source src="/ai-brain.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
           <source src="/ai-brain.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
