@@ -36,7 +36,7 @@ const blogPostsData: Record<string, BlogPostData> = {
       '### The Road Ahead',
       'As generative AI continues to mature, we can expect to see even greater integration with physical systems through advanced robotics and automated manufacturing processes. The line between digital design and physical production will blur, enabling more responsive, customized manufacturing capabilities.',
       'Companies that successfully implement generative AI now will be well-positioned to capitalize on these future developments, gaining significant competitive advantages in efficiency, innovation, and time-to-market.',
-      'At DATAi2i, we're working with industry leaders to implement practical, effective generative AI solutions that deliver measurable business value today while building capabilities for tomorrow's challenges. Contact us to learn how generative AI can transform your industrial operations.'
+      'At DATAi2i, we\'re working with industry leaders to implement practical, effective generative AI solutions that deliver measurable business value today while building capabilities for tomorrow\'s challenges. Contact us to learn how generative AI can transform your industrial operations.'
     ]
   },
   'effective-ai-assistants-customer-service': {
@@ -55,7 +55,7 @@ const blogPostsData: Record<string, BlogPostData> = {
       'The most successful AI assistants are designed with a deep understanding of both customer needs and human conversation patterns. This requires extensive research into your specific customer base, their common issues, and their communication preferences.',
       'Involve actual customer service representatives in the design process - they have invaluable insights into customer needs and the nuances of effective communication.',
       '#### 2. Transparency and Setting Expectations',
-      'Customers appreciate knowing they're interacting with an AI. Being transparent about the nature of the assistant and its capabilities helps set appropriate expectations and reduces frustration when complex issues arise.',
+      'Customers appreciate knowing they\'re interacting with an AI. Being transparent about the nature of the assistant and its capabilities helps set appropriate expectations and reduces frustration when complex issues arise.',
       'Consider including a brief introduction that explains the assistant\'s capabilities and limitations, as well as an easy path to human agents when needed.',
       '#### 3. Continuous Learning',
       'The most effective AI assistants improve over time by learning from each interaction. Implement robust feedback mechanisms and regular review cycles to identify areas for improvement and expansion of the assistant\'s knowledge base.',
