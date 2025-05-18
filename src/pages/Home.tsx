@@ -17,19 +17,20 @@ const Home = () => {
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-20"
-          >
-            <source
-              src="/public/ai.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+  ref={videoRef}
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-full h-full object-cover opacity-20"
+>
+  <source
+    src="/ai-brain.mp4"
+    type="video/mp4"
+  />
+  Your browser does not support the video tag.
+</video>
+
 
           {/* translucent overlays */}
           <div className="absolute inset-0 bg-dark/70"></div>
