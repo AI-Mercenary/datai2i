@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-screen overflow-forward">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
