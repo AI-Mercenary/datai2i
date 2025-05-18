@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen overflow-forward">
+      <section className="relative h-screen overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
@@ -25,7 +25,7 @@ const Home = () => {
   className="w-full h-full object-cover opacity-20"
 >
   <source
-    src="/public/ai-brain.mp4"
+    src="/public/ai.mp4"
     type="video/mp4"
   />
   Your browser does not support the video tag.
