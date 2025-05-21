@@ -87,7 +87,7 @@ const Blogs = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-8 md:py-8 lg:py-20 bg-dark/50 backdrop-blur-md relative mt-16">
+      <section className="py-8 md:py-8 lg:py-3 bg-dark/50 backdrop-blur-md relative mt-16">
         <div className="absolute inset-0 bg-gradient-to-b from-dark/20 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
