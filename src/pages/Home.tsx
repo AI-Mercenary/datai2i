@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -13,32 +13,23 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
-        {/* Video Background */}
+      <section className="relative h-screen overflow-hidden w-full">
         <div className="absolute inset-0 z-0">
           <video
-  ref={videoRef}
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="w-full h-full object-cover opacity-20"
->
-  <source
-    src="/ai.mp4"
-    type="video/mp4"
-  />
-  Your browser does not support the video tag.
-</video>
-
-
-          {/* translucent overlays */}
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-20"
+          >
+            <source src="/ai.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="absolute inset-0 bg-dark/70"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/30 to-dark"></div>
         </div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
+        <div className="relative z-10 container mx-auto px-2 md:px-6 h-full flex flex-col justify-center items-center text-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-gradient">
               Where AI Meets <br className="hidden md:block" /> Industrial Innovation
@@ -59,8 +50,6 @@ const Home = () => {
               </Link>
             </div>
           </div>
-
-          {/* Scroll Down Indicator */}
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,26 +68,23 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* About Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24 w-full bg-white border-t border-purple-200">
+        <div className="container mx-auto px-2 md:px-6">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
+            <h2 className="text-3xl md:text-4xl font-black text-purple-950 px-4 py-2 rounded-md inline-block">
               Pushing the Boundaries of AI
             </h2>
-            <p className="text-lg text-white/70">
+            <p className="text-lg text-purple-900 font-bold">
               At DATAi2i, we blend cutting-edge AI technology with industrial expertise to solve
               complex challenges and drive innovation across sectors.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {/* Card 1 */}
-            <div className="glass-card p-6 flex flex-col items-center text-center">
-              <div className="bg-secondary/20 rounded-full p-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16">
+            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-900 hover:bg-purple-400">
+              <div className="bg-[#2D1247]/20 rounded-full p-4 mb-6">
                 <svg
-                  className="w-8 h-8 text-secondary"
+                  className="w-8 h-8 text-[#2D1247]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -112,18 +98,16 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Innovative Solutions</h3>
-              <p className="text-white/70">
+              <h3 className="text-xl font-bold text-[#2D1247]">Innovative Solutions</h3>
+              <p className="text-[#2D1247] font-bold">
                 Developing AI solutions that adapt to your unique business challenges and
                 opportunities.
               </p>
             </div>
-
-            {/* Card 2 */}
-            <div className="glass-card p-6 flex flex-col items-center text-center">
-              <div className="bg-secondary/20 rounded-full p-4 mb-6">
+            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-900 hover:bg-purple-400">
+              <div className="bg-[#2D1247]/20 rounded-full p-4 mb-6">
                 <svg
-                  className="w-8 h-8 text-secondary"
+                  className="w-8 h-8 text-[#2D1247]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -137,18 +121,16 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Research Driven</h3>
-              <p className="text-white/70">
+              <h3 className="text-xl font-bold text-[#2D1247]">Research Driven</h3>
+              <p className="text-[#2D1247] font-bold">
                 Continuously advancing our AI capabilities through rigorous research and
                 development.
               </p>
             </div>
-
-            {/* Card 3 */}
-            <div className="glass-card p-6 flex flex-col items-center text-center">
-              <div className="bg-secondary/20 rounded-full p-4 mb-6">
+            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-900 hover:bg-purple-400">
+              <div className="bg-[#2D1247]/20 rounded-full p-4 mb-6">
                 <svg
-                  className="w-8 h-8 text-secondary"
+                  className="w-8 h-8 text-[#2D1247]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -162,8 +144,8 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Industry Integration</h3>
-              <p className="text-white/70">
+              <h3 className="text-xl font-bold text-[#2D1247]">Industry Integration</h3>
+              <p className="text-[#2D1247] font-bold">
                 Seamlessly integrating AI capabilities into existing industrial processes and
                 systems.
               </p>
@@ -171,10 +153,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Services Preview */}
-      <section className="py-16 bg-dark/60">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-dark/60 w-full">
+        <div className="container mx-auto px-2 md:px-6">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
               Our Core Services
@@ -183,9 +164,7 @@ const Home = () => {
               Transformative AI solutions designed to address industry-specific challenges
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            {/* Service 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
             <div className="glass-card p-6 hover:-translate-y-2">
               <div className="mb-4 text-secondary">
                 <svg
@@ -223,8 +202,6 @@ const Home = () => {
                 </svg>
               </Link>
             </div>
-
-            {/* Service 2 */}
             <div className="glass-card p-6 hover:-translate-y-2">
               <div className="mb-4 text-secondary">
                 <svg
@@ -263,8 +240,6 @@ const Home = () => {
                 </svg>
               </Link>
             </div>
-
-            {/* Service 3 */}
             <div className="glass-card p-6 hover:-translate-y-2">
               <div className="mb-4 text-secondary">
                 <svg
@@ -302,8 +277,6 @@ const Home = () => {
                 </svg>
               </Link>
             </div>
-
-            {/* Service 4 */}
             <div className="glass-card p-6 hover:-translate-y-2">
               <div className="mb-4 text-secondary">
                 <svg
@@ -342,7 +315,6 @@ const Home = () => {
               </Link>
             </div>
           </div>
-
           <div className="text-center mt-12">
             <Link to="/services" className="glow-button">
               View All Services
@@ -350,26 +322,27 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-50"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="glass-panel p-10 md:p-16 rounded-2xl max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="py-20 w-full bg-white border-t border-purple-200">
+        <div className="container mx-auto px-2 md:px-6">
+          <div className="glass-panel p-10 md:p-16 rounded-2xl max-w-4xl mx-auto text-center border-2 border-purple-950">
+            <h2 className="text-3xl md:text-4xl font-black text-purple-950 px-4 py-2 rounded-md inline-block">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-[#2D1247] font-bold mb-8 max-w-2xl mx-auto">
               Partner with us to leverage the power of AI and drive your business into the future of
               technology.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact" className="glow-button">
+              <Link
+                to="/contact"
+                className="px-6 py-3 rounded-full bg-[#2D1247] text-white font-bold transition-all hover:bg-[#2D1247]/80 hover:scale-105 focus:outline-none shadow-glow animate-pulse-glow"
+              >
                 Contact Us Today
               </Link>
               <Link
                 to="/about"
-                className="px-6 py-3 rounded-full border-2 border-white/20 text-white font-medium transition-all hover:border-white/40 hover:bg-white/5 hover:scale-105 focus:outline-none"
+                className="px-6 py-3 rounded-full border-2 border-purple-950 bg-white/10 text-[#2D1247] font-bold transition-all hover:border-purple-400 hover:bg-purple-600 hover:scale-105 focus:outline-none"
               >
                 About Our Team
               </Link>

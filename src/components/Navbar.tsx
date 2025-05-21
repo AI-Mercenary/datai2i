@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -34,16 +33,15 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className={`glass-navbar transition-all duration-300 ${scrolled ? 'py-3' : 'py-5'}`}>
+    <nav className={`glass-navbar bg-purple-400/50 transition-all duration-300 ${scrolled ? 'py-1' : 'py-1'}`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-white font-bold text-xl flex items-center">
-          <svg className="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3L4 7.5V16.5L12 21L20 16.5V7.5L12 3Z" stroke="#896deb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M12 9L12 15" stroke="#896deb" strokeWidth="2" strokeLinecap="round" />
-            <path d="M9 11.5L15 11.5" stroke="#896deb" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-          <span className="text-gradient">DATAi2i</span>
+        <Link to="/" className="flex items-center ml-0">
+          <img
+            src="/datai2i.png"
+            alt="DATAi2i Logo"
+            className="w-30 h-20 object-contain"
+          />
         </Link>
         
         {/* Desktop Navigation */}
@@ -52,15 +50,15 @@ const Navbar = () => {
             <Link 
               key={item.name}
               to={item.path}
-              className={`text-sm font-medium transition-all duration-300 hover:text-secondary 
-              ${location.pathname === item.path ? 'text-secondary' : 'text-white/80'}`}
+              className={`text-base font-medium transition-all duration-300 hover:text-purple-950 
+              ${location.pathname === item.path ? 'text-slate-200' : 'text-slate-200'}`}
             >
               {item.name}
             </Link>
           ))}
           <a 
             href="mailto:team@datai2i.com" 
-            className="glow-button"
+            className="glow-button bg-purple-900 hover:bg-purple-950 text-base"
           >
             Get Started
           </a>
@@ -69,7 +67,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button 
           onClick={() => setMenuOpen(!menuOpen)} 
-          className="md:hidden text-white"
+          className="md:hidden text-purple-950"
           aria-label="Toggle menu"
         >
           {menuOpen ? (
@@ -86,21 +84,21 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden glass-panel mt-1 py-4 px-4">
+        <div className={`md:hidden glass-panel mt-1 py-4 px-4 bg-purple-400/30 backdrop-blur-md ${scrolled ? 'backdrop-blur-lg' : ''}`}>
           <div className="flex flex-col space-y-4">
             {navItems.map((item) => (
               <Link 
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-medium transition-all duration-300 hover:text-secondary py-2
-                ${location.pathname === item.path ? 'text-secondary' : 'text-white/80'}`}
+                className={`text-base font-medium transition-all duration-300 hover:text-white py-2
+                ${location.pathname === item.path ? 'text-purple-950' : 'text-purple-950'}`}
               >
                 {item.name}
               </Link>
             ))}
             <a 
               href="mailto:team@datai2i.com" 
-              className="glow-button text-center mt-2"
+              className="glow-button text-center mt-2 text-base"
             >
               Get Started
             </a>
