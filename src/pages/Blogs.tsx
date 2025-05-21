@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -88,20 +87,20 @@ const Blogs = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 md:py-28 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"></div>
+      <section className="py-8 md:py-8 lg:py-20 bg-dark/50 backdrop-blur-md relative mt-16">
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/20 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gradient">AI Insights</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-purple-500">AI Insights</h1>
             <p className="text-lg md:text-xl text-white/80 mb-8">
               Stay informed with the latest trends, technologies, and best practices in the world of AI.
             </p>
           </div>
         </div>
       </section>
-      
+
       {/* Filter Section */}
-      <section className="py-8">
+      <section className="py-5">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
             {categories.map((category) => (
@@ -164,7 +163,7 @@ const Blogs = () => {
       </section>
       
       {/* Newsletter Section */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4">
           <div className="glass-panel p-8 md:p-12 rounded-2xl max-w-3xl mx-auto">
             <div className="text-center mb-8">
@@ -184,7 +183,7 @@ const Blogs = () => {
                 />
                 <button
                   type="submit"
-                  className="glow-button whitespace-nowrap"
+                  className="glow-button bg-purple-900 hover:bg-purple-950"
                 >
                   Subscribe
                 </button>
