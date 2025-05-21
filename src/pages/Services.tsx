@@ -71,7 +71,7 @@ const Services = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 md:py-28 relative">
+      <section className="py-8 md:py-8 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
