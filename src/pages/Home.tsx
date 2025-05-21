@@ -39,7 +39,7 @@ const Home: React.FC = () => {
               innovation, and growth in the digital era.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-              <Link to="/services" className="glow-button animate-pulse-glow hover:bg-purple-900">
+              <Link to="/services" className="glow-button animate-pulse-glow">
                 Explore Services
               </Link>
               <Link
