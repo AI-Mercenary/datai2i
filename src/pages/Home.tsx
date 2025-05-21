@@ -39,7 +39,7 @@ const Home: React.FC = () => {
               innovation, and growth in the digital era.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-              <Link to="/services" className="glow-button animate-pulse-glow">
+              <Link to="/services" className="glow-button animate-pulse-glow hover:bg-purple-900">
                 Explore Services
               </Link>
               <Link
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16">
-            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-900 hover:bg-purple-400">
+            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-950 ">
               <div className="bg-[#2D1247]/20 rounded-full p-4 mb-6">
                 <svg
                   className="w-8 h-8 text-[#2D1247]"
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
                 opportunities.
               </p>
             </div>
-            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-900 hover:bg-purple-400">
+            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-950">
               <div className="bg-[#2D1247]/20 rounded-full p-4 mb-6">
                 <svg
                   className="w-8 h-8 text-[#2D1247]"
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
                 development.
               </p>
             </div>
-            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-900 hover:bg-purple-400">
+            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-950">
               <div className="bg-[#2D1247]/20 rounded-full p-4 mb-6">
                 <svg
                   className="w-8 h-8 text-[#2D1247]"
