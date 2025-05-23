@@ -363,42 +363,42 @@ const Home: React.FC = () => {
                 <img
                   src="/barraiser.png"
                   alt="Barraiser Logo"
-                  className="h-20 w-auto object-contain"
+                  className="h-24 w-auto object-contain"
                 />
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
                 <img
                   src="/candarine.png"
                   alt="Candarine Logo"
-                  className="h-20 w-52 object-contain"
+                  className="h-26 w-72 object-contain"
                 />
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
                 <img
                   src="/csir.png"
                   alt="CSIR Logo"
-                  className="h-20 wauto object-contain"
+                  className="h-28 w-auto object-contain"
                 />
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
                 <img
                   src="/dreambot.png"
                   alt="Dreambot Logo"
-                  className="h-26 w-52 object-contain"
+                  className="h-48 w-34 object-contain"
                 />
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
                 <img
                   src="/groov.png"
                   alt="Groov Logo"
-                  className="h-16 w-32 object-contain"
+                  className="h-48 w-40 object-contain"
                 />
               </div>
               <div className="bg/white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
                 <img
                   src="/gvpcew.png"
                   alt="GVPCEW Logo"
-                  className="h-24 w-52 object-contain"
+                  className="h-32 w-52 object-contain"
                 />
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
