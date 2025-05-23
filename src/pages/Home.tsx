@@ -367,7 +367,7 @@ const Home: React.FC = () => {
                   <img
                     src="/datai2i.png"
                     alt="Client Logo"
-                    className="h-15 w-auto object-contain"
+                    className="h-35 w-auto object-contain"
                   />
                 </div>
               ))}
