@@ -325,100 +325,125 @@ const Home: React.FC = () => {
         </div>
       </section>
       {/* Our Clients Section */}
-      <section className="py-16 w-full bg-white border-t border-purple-950">
-        <style>
-          {`
-            .marquee-content {
-              display: flex;
-              animation: marquee 15s linear infinite;
-            }
-            @keyframes marquee {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-            @media (prefers-reduced-motion: reduce) {
-              .marquee-content {
-                animation: none;
-                transform: translateX(0);
-              }
-            }
-          `}
-        </style>
-        <div className="container mx-auto px-1 md:px-1">
-          <div className="max-w-4xl mx-auto text-center mb-6">
-            <h2 className="text-3xl md:text-4xl font-black text-purple-950 px-2 py-2 rounded-md inline-block">
-              Our Clients
-            </h2>
-            <p className="text-lg text-purple-900 font-bold">
-              We’re proud to partner with industry leaders who trust our AI solutions to drive their success.
-            </p>
-          </div>
-          <div className="overflow-hidden whitespace-nowrap">
-            <div className={`flex gap-1 min-w-[200%] ${isMounted ? 'marquee-content' : ''}`}>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
-                <img
-                  src="/barraiser.png"
-                  alt="Barraiser Logo"
-                  className="h-24 w-auto object-contain"
-                />
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
-                <img
-                  src="/candarine.png"
-                  alt="Candarine Logo"
-                  className="h-26 w-72 object-contain"
-                />
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
-                <img
-                  src="/csir.png"
-                  alt="CSIR Logo"
-                  className="h-28 w-auto object-contain"
-                />
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
-                <img
-                  src="/dreambot.png"
-                  alt="Dreambot Logo"
-                  className="h-48 w-34 object-contain"
-                />
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
-                <img
-                  src="/groov.png"
-                  alt="Groov Logo"
-                  className="h-48 w-40 object-contain"
-                />
-              </div>
-              <div className="bg/white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
-                <img
-                  src="/gvpcew.png"
-                  alt="GVPCEW Logo"
-                  className="h-32 w-52 object-contain"
-                />
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
-                <img
-                  src="/liberin.png"
-                  alt="Liberin Logo"
-                  className="h-26 w-52 object-contain"
-                />
-              </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
-                <img
-                  src="/tera.png"
-                  alt="Tera Logo"
-                  className="h-26 w-58 object-contain"
-                />
-              </div>
-            </div>
-          </div>
+<section className="py-16 w-full bg-white border-t border-purple-950">
+  <style>
+    {`
+      .marquee-container {
+        overflow: hidden;
+        whitespace: nowrap;
+      }
+      .marquee-content {
+        display: flex;
+        animation: marquee 15s linear infinite;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      @media (max-width: 640px) {
+        .marquee-content {
+          animation: none; /* Disable animation on mobile for better UX */
+          flex-wrap: nowrap;
+          justify-content: center;
+          gap: 0.5rem; /* Smaller gap for mobile */
+        }
+        .marquee-content > div {
+          flex: 0 0 auto; /* Ensure logos maintain their size */
+          width: 120px; /* Fixed width to prevent overflow */
+          height: 100px; /* Fixed height to ensure consistency */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .marquee-content img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain; /* Ensure logos fit without resizing */
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .marquee-content {
+          animation: none;
+          transform: translateX(0);
+        }
+      }
+    `}
+  </style>
+  <div className="container mx-auto px-1 md:px-1">
+    <div className="max-w-4xl mx-auto text-center mb-6">
+      <h2 className="text-3xl md:text-4xl font-black text-purple-950 px-2 py-2 rounded-md inline-block">
+        Our Clients
+      </h2>
+      <p className="text-lg text-purple-900 font-bold">
+        We’re proud to partner with industry leaders who trust our AI solutions to drive their success.
+      </p>
+    </div>
+    <div className="marquee-container">
+      <div className={`flex gap-1 min-w-[200%] ${isMounted ? 'marquee-content' : ''}`}>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/barraiser.png"
+            alt="Barraiser Logo"
+            className="h-24 w-auto object-contain"
+          />
         </div>
-      </section>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/candarine.png"
+            alt="Candarine Logo"
+            className="h-26 w-72 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/csir.png"
+            alt="CSIR Logo"
+            className="h-28 w-auto object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/dreambot.png"
+            alt="Dreambot Logo"
+            className="h-48 w-34 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/groov.png"
+            alt="Groov Logo"
+            className="h-48 w-40 object-contain"
+          />
+        </div>
+        <div className="bg/white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/gvpcew.png"
+            alt="GVPCEW Logo"
+            className="h-32 w-52 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/liberin.png"
+            alt="Liberin Logo"
+            className="h-26 w-52 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/tera.png"
+            alt="Tera Logo"
+            className="h-26 w-58 object-contain"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* CTA Section */}
       <section className="py-20 w-full bg-dark border-white">
         <div className="container mx-auto px-2 md:px-6">
