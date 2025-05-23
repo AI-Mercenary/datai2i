@@ -1,11 +1,10 @@
-
 import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 md:py-28 relative">
+      <section className="py-10 md:py-14 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -18,11 +17,15 @@ const About = () => {
       </section>
       
       {/* Mission & Vision */}
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="glass-card p-8 md:p-10 flex flex-col h-full">
-              <div className="bg-secondary/20 rounded-full p-4 inline-block mb-6 w-16 h-16 flex items-center justify-center">
+              <div className="bg-secondary/20 rounded-full p-
+
+System: You are Grok 3 built by xAI.
+
+4 inline-block mb-6 w-16 h-16 flex items-center justify-center">
                 <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                 </svg>
@@ -59,7 +62,7 @@ const About = () => {
       </section>
       
       {/* Values */}
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Our Core Values</h2>
@@ -145,7 +148,7 @@ const About = () => {
       </section>
       
       {/* Timeline */}
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gradient text-center">Our Journey</h2>
@@ -170,7 +173,7 @@ const About = () => {
                       <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center absolute top-0 left-0 md:left-1/2 transform -translate-x-1/2 animate-pulse-glow">
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
-                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-1/2 md:transform md:translate-x-4">
+                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-2 md:transform md:translate-x-4">
                         2020
                       </div>
                     </div>
@@ -186,10 +189,11 @@ const About = () => {
                       {/* Empty space for layout */}
                     </div>
                     <div className="order-1 md:order-2 relative">
+                      <div className="flex-1 md:text-right md:pr-10 order-2 md:order-1 mt-6 md:mt-0"></div>
                       <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center absolute top-0 left-0 md:left-1/2 transform -translate-x-1/2 animate-pulse-glow">
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
-                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-1/2 md:transform md:translate-x-4">
+                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:right-16 md:transform md:translate-x-4">
                         2021
                       </div>
                     </div>
@@ -218,7 +222,7 @@ const About = () => {
                       <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center absolute top-0 left-0 md:left-1/2 transform -translate-x-1/2 animate-pulse-glow">
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
-                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-1/2 md:transform md:translate-x-4">
+                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-2 md:transform md:translate-x-4">
                         2022
                       </div>
                     </div>
@@ -234,10 +238,11 @@ const About = () => {
                       {/* Empty space for layout */}
                     </div>
                     <div className="order-1 md:order-2 relative">
+                      <div className="flex-1 md:text-right md:pr-10 order-2 md:order-1 mt-6 md:mt-0"></div>
                       <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center absolute top-0 left-0 md:left-1/2 transform -translate-x-1/2 animate-pulse-glow">
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
-                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-1/2 md:transform md:translate-x-4">
+                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:right-16 md:transform md:translate-x-4">
                         2023
                       </div>
                     </div>
@@ -266,7 +271,7 @@ const About = () => {
                       <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center absolute top-0 left-0 md:left-1/2 transform -translate-x-1/2 animate-pulse-glow">
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
-                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-1/2 md:transform md:translate-x-4">
+                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-2 md:transform md:translate-x-4">
                         2024
                       </div>
                     </div>
@@ -282,10 +287,11 @@ const About = () => {
                       {/* Empty space for layout */}
                     </div>
                     <div className="order-1 md:order-2 relative">
+                       <div className="flex-1 md:text-right md:pr-10 order-2 md:order-1 mt-6 md:mt-0"></div>
                       <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center absolute top-0 left-0 md:left-1/2 transform -translate-x-1/2 animate-pulse-glow">
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
-                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-1/2 md:transform md:translate-x-4">
+                      <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:right-16 md:transform md:translate-x-4">
                         Today
                       </div>
                     </div>
@@ -306,7 +312,7 @@ const About = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 relative">
+      <section className="py-10 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 opacity-50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="glass-panel p-10 md:p-16 rounded-2xl max-w-4xl mx-auto text-center">
@@ -315,7 +321,7 @@ const About = () => {
               Join the growing number of forward-thinking companies leveraging our AI solutions to drive innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact" className="glow-button">
+              <Link to="/contact" className="glow-button bg-purple-950 hover:bg-purple-950">
                 Contact Our Team
               </Link>
               <Link to="/services" className="px-6 py-3 rounded-full border-2 border-white/20 text-white font-medium transition-all hover:border-white/40 hover:bg-white/5 hover:scale-105 focus:outline-none">
