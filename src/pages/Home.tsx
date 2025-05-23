@@ -248,7 +248,7 @@ const Home: React.FC = () => {
                   className="w-10 h-10"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 24  garnering24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -330,7 +330,7 @@ const Home: React.FC = () => {
           {`
             .marquee-content {
               display: flex;
-              animation: marquee 20s linear infinite;
+              animation: marquee 15s linear infinite;
             }
             @keyframes marquee {
               0% {
@@ -349,7 +349,7 @@ const Home: React.FC = () => {
           `}
         </style>
         <div className="container mx-auto px-1 md:px-1">
-          <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="max-w-4xl mx-auto text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-black text-purple-950 px-2 py-2 rounded-md inline-block">
               Our Clients
             </h2>
@@ -358,19 +358,63 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="overflow-hidden whitespace-nowrap">
-            <div className={`flex gap-7 min-w-[200%] ${isMounted ? 'marquee-content' : ''}`}>
-              {Array(10).fill(0).map((_, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center border-2 border-purple-950 transition-transform hover:-translate-y-2"
-                >
-                  <img
-                    src="/datai2i.png"
-                    alt="Client Logo"
-                    className="h-35 w-auto object-contain"
-                  />
-                </div>
-              ))}
+            <div className={`flex gap-1 min-w-[200%] ${isMounted ? 'marquee-content' : ''}`}>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+                <img
+                  src="/barraiser.png"
+                  alt="Barraiser Logo"
+                  className="h-20 w-auto object-contain"
+                />
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+                <img
+                  src="/candarine.png"
+                  alt="Candarine Logo"
+                  className="h-20 w-52 object-contain"
+                />
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+                <img
+                  src="/csir.png"
+                  alt="CSIR Logo"
+                  className="h-20 wauto object-contain"
+                />
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+                <img
+                  src="/dreambot.png"
+                  alt="Dreambot Logo"
+                  className="h-26 w-52 object-contain"
+                />
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+                <img
+                  src="/groov.png"
+                  alt="Groov Logo"
+                  className="h-16 w-32 object-contain"
+                />
+              </div>
+              <div className="bg/white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+                <img
+                  src="/gvpcew.png"
+                  alt="GVPCEW Logo"
+                  className="h-24 w-52 object-contain"
+                />
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+                <img
+                  src="/liberin.png"
+                  alt="Liberin Logo"
+                  className="h-26 w-52 object-contain"
+                />
+              </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+                <img
+                  src="/tera.png"
+                  alt="Tera Logo"
+                  className="h-26 w-58 object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -11,11 +11,11 @@ const Footer = () => {
               <img
                 src="/datai2i.png"
                 alt="DATAi2i Logo"
-                className="w-30 h-22 object-contain"
+                className="w-30 h-20 object-contain"
               />
             </Link>
             <p className="text-[#2D1247] mb-4 text-sm font-bold">
-              Leading the way in AI innovation and industrial transformation.
+             <h1>Artificial Intelligence to Internet of Things</h1>
             </p>
             <div className="flex space-x-4">
               <a

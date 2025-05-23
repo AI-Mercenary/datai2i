@@ -174,7 +174,7 @@ System: You are Grok 3 built by xAI.
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
                       <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-2 md:transform md:translate-x-4">
-                        2020
+                        2019
                       </div>
                     </div>
                     <div className="flex-1 md:pl-10 order-3 hidden md:block">
@@ -194,16 +194,16 @@ System: You are Grok 3 built by xAI.
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
                       <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:right-16 md:transform md:translate-x-4">
-                        2021
+                        2020
                       </div>
                     </div>
                     <div className="flex-1 md:pl-10 order-3 mt-6 md:mt-0">
                       <div className="glass-card p-6">
-                        <h3 className="text-xl font-bold mb-2">First Major Project</h3>
-                        <p className="text-white/70">
-                          Launched our first industrial AI solution, helping a manufacturing client achieve a 35% increase in operational efficiency.
-                        </p>
-                      </div>
+    <h3 className="text-xl font-bold mb-2">Our First Client and Major Project Milestone</h3>
+    <p className="text-white/70">
+        We successfully developed an end-to-end NLP model to power an Intelligent Hiring Platform, streamlining the recruitment process with advanced language processing capabilities.
+    </p>
+</div>
                     </div>
                   </div>
                 </div>
@@ -243,14 +243,14 @@ System: You are Grok 3 built by xAI.
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
                       <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:right-16 md:transform md:translate-x-4">
-                        2023
+                        2024
                       </div>
                     </div>
                     <div className="flex-1 md:pl-10 order-3 mt-6 md:mt-0">
                       <div className="glass-card p-6">
                         <h3 className="text-xl font-bold mb-2">Research & Innovation Center</h3>
                         <p className="text-white/70">
-                          Established our dedicated R&D center focused on advancing industrial AI applications and generative AI technologies.
+                          Established our dedicated R&D center focused on advancing industrial AI applications and generative AI technologies in A'Hub.
                         </p>
                       </div>
                     </div>
@@ -272,7 +272,7 @@ System: You are Grok 3 built by xAI.
                         <div className="w-4 h-4 rounded-full bg-white"></div>
                       </div>
                       <div className="mt-2 md:mt-0 ml-10 md:ml-0 text-secondary md:absolute md:top-1 md:left-2 md:transform md:translate-x-4">
-                        2024
+                        2025
                       </div>
                     </div>
                     <div className="flex-1 md:pl-10 order-3 hidden md:block">

@@ -6,14 +6,11 @@ const Contact = () => {
     email: "",
     phone: "",
     company: "",
+    service: "",
     message: "",
   });
 
-  const [formStatus, setFormStatus] = useState<{
-    submitted: boolean;
-    success: boolean;
-    message: string;
-  }>({
+  const [formStatus, setFormStatus] = useState({
     submitted: false,
     success: false,
     message: "",
@@ -28,34 +25,66 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulating form submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: "Thank you for your message! We will get back to you soon.",
-    });
-
-    // Reset form
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        message: "",
+    try {
+      // Send form data to backend API
+      const response = await fetch("http://localhost:3001/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: formData.email,
+          to: "team@datai2i.com",
+          subject: formData.service || "General Inquiry",
+          text: `
+            Name: ${formData.name}
+            Email: ${formData.email}
+            Phone: ${formData.phone}
+            Company: ${formData.company}
+            Message: ${formData.message}
+          `,
+        }),
       });
 
-      // Reset status
-      setTimeout(() => {
+      if (response.ok) {
         setFormStatus({
-          submitted: false,
-          success: false,
-          message: "",
+          submitted: true,
+          success: true,
+          message: "Thank you for your message! We will get back to you soon.",
         });
-      }, 5000);
-    }, 1000);
+
+        // Reset form
+        setTimeout(() => {
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            company: "",
+            service: "",
+            message: "",
+          });
+
+          // Reset status
+          setTimeout(() => {
+            setFormStatus({
+              submitted: false,
+              success: false,
+              message: "",
+            });
+          }, 5000);
+        }, 1000);
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: "Sorry, something went wrong. Please try again later.",
+      });
+    }
   };
 
   return (
@@ -130,7 +159,6 @@ const Contact = () => {
                       href="mailto:team@datai2i.com"
                       className="text-white hover:text-purple-500 transition-colors"
                       onClick={(e) => {
-                        // Ensure the mailto link opens the default email client
                         window.location.href = "mailto:team@datai2i.com";
                       }}
                     >
@@ -305,24 +333,27 @@ const Contact = () => {
                   <select
                     id="service"
                     name="service"
+                    value={formData.service}
+                    onChange={handleChange}
                     className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-white focus:outline-none focus:border-secondary"
+                    required
                   >
-                    <option value="" className="bg-dark">
+                    <option value="" className="bg-dark" disabled>
                       Select a service
                     </option>
-                    <option value="genai" className="bg-dark">
+                    <option value="GenAI Innovation" className="bg-dark">
                       GenAI Innovation
                     </option>
-                    <option value="assistants" className="bg-dark">
+                    <option value="AI Assistants" className="bg-dark">
                       AI Assistants
                     </option>
-                    <option value="custom" className="bg-dark">
+                    <option value="Custom AI Development" className="bg-dark">
                       Custom AI Development
                     </option>
-                    <option value="iot" className="bg-dark">
+                    <option value="Intelligent Industrial IoT" className="bg-dark">
                       Intelligent Industrial IoT
                     </option>
-                    <option value="other" className="bg-dark">
+                    <option value="Other" className="bg-dark">
                       Other
                     </option>
                   </select>
