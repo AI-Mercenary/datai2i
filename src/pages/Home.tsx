@@ -330,7 +330,7 @@ const Home: React.FC = () => {
     {`
       .marquee-container {
         overflow: hidden;
-        whitespace: nowrap;
+        white-space: nowrap;
       }
       .marquee-content {
         display: flex;
@@ -344,17 +344,21 @@ const Home: React.FC = () => {
           transform: translateX(-50%);
         }
       }
+      .marquee-content.paused {
+        animation-play-state: paused;
+      }
+      .marquee-content:hover {
+        animation-play-state: paused; /* Pause animation on hover for better UX */
+      }
       @media (max-width: 640px) {
         .marquee-content {
-          animation: none; /* Disable animation on mobile for better UX */
-          flex-wrap: nowrap;
-          justify-content: center;
+          animation: marquee 20s linear infinite; /* Slower animation for mobile */
           gap: 0.5rem; /* Smaller gap for mobile */
         }
         .marquee-content > div {
-          flex: 0 0 auto; /* Ensure logos maintain their size */
-          width: 120px; /* Fixed width to prevent overflow */
-          height: 100px; /* Fixed height to ensure consistency */
+          flex: 0 0 auto;
+          width: 120px; /* Fixed width to fit mobile screens */
+          height: 100px; /* Fixed height for consistency */
           display: flex;
           align-items: center;
           justify-content: center;
@@ -362,7 +366,7 @@ const Home: React.FC = () => {
         .marquee-content img {
           max-width: 100%;
           max-height: 100%;
-          object-fit: contain; /* Ensure logos fit without resizing */
+          object-fit: contain; /* Preserve original logo sizes */
         }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -419,7 +423,64 @@ const Home: React.FC = () => {
             className="h-48 w-40 object-contain"
           />
         </div>
-        <div className="bg/white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/gvpcew.png"
+            alt="GVPCEW Logo"
+            className="h-32 w-52 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/liberin.png"
+            alt="Liberin Logo"
+            className="h-26 w-52 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/tera.png"
+            alt="Tera Logo"
+            className="h-26 w-58 object-contain"
+          />
+        </div>
+        {/* Duplicate logos to ensure seamless marquee loop */}
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/barraiser.png"
+            alt="Barraiser Logo"
+            className="h-24 w-auto object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/candarine.png"
+            alt="Candarine Logo"
+            className="h-26 w-72 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/csir.png"
+            alt="CSIR Logo"
+            className="h-28 w-auto object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/dreambot.png"
+            alt="Dreambot Logo"
+            className="h-48 w-34 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
+          <img
+            src="/groov.png"
+            alt="Groov Logo"
+            className="h-48 w-40 object-contain"
+          />
+        </div>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center transition-transform hover:-translate-y-2">
           <img
             src="/gvpcew.png"
             alt="GVPCEW Logo"
