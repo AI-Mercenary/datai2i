@@ -33,7 +33,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className={`glass-navbar bg-purple-300/50 transition-all duration-300 ${scrolled ? 'py-1' : 'py-1'}`}>
+    <nav className={`glass-navbar bg-white transition-all duration-300 ${scrolled ? 'py-1' : 'py-1'}`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center ml-0">
@@ -50,8 +50,8 @@ const Navbar = () => {
             <Link 
               key={item.name}
               to={item.path}
-              className={`text-base font-medium transition-all duration-300 hover:text-purple-950 
-              ${location.pathname === item.path ? 'text-slate-200' : 'text-slate-200'}`}
+              className={`text-base font-medium transition-all duration-300 hover:text-black
+              ${location.pathname === item.path ? 'text-purple-900' : 'text-purple-900'}`}
             >
               {item.name}
             </Link>

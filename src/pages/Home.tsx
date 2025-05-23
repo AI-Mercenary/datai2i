@@ -1,13 +1,15 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.7;
     }
+    setIsMounted(true);
   }, []);
 
   return (
@@ -26,10 +28,10 @@ const Home: React.FC = () => {
             <source src="/ai.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-dark/70"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/30 to-dark"></div>
+          <div className="absolute inset-0 bg-purple-800/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark to-dark"></div>
         </div>
-        <div className="relative z-10 container mx-auto px-2 md:px-6 h-full flex flex-col justify-center items-center text-center">
+        <div className="relative z-10 container mx-auto px-2 md:px-4 h-full flex flex-col justify-center items-center text-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-gradient">
               Where AI Meets <br className="hidden md:block" /> Industrial Innovation
@@ -39,7 +41,7 @@ const Home: React.FC = () => {
               innovation, and growth in the digital era.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-              <Link to="/services" className="glow-button animate-pulse-glow">
+              <Link to="/services" className="glow-button animate-pulse-glow bg-purple-900 hover:bg-purple-950">
                 Explore Services
               </Link>
               <Link
@@ -81,7 +83,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16">
-            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-950 ">
+            <div className="glass-card p-6 flex flex-col items-center text-center border-2 border-purple-950">
               <div className="bg-[#2D1247]/20 rounded-full p-4 mb-6">
                 <svg
                   className="w-8 h-8 text-[#2D1247]"
@@ -322,27 +324,78 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* Our Clients Section */}
+      <section className="py-16 w-full bg-white border-t border-purple-950">
+        <style>
+          {`
+            .marquee-content {
+              display: flex;
+              animation: marquee 20s linear infinite;
+            }
+            @keyframes marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .marquee-content {
+                animation: none;
+                transform: translateX(0);
+              }
+            }
+          `}
+        </style>
+        <div className="container mx-auto px-1 md:px-1">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black text-purple-950 px-2 py-2 rounded-md inline-block">
+              Our Clients
+            </h2>
+            <p className="text-lg text-purple-900 font-bold">
+              We’re proud to partner with industry leaders who trust our AI solutions to drive their success.
+            </p>
+          </div>
+          <div className="overflow-hidden whitespace-nowrap">
+            <div className={`flex gap-7 min-w-[200%] ${isMounted ? 'marquee-content' : ''}`}>
+              {Array(10).fill(0).map((_, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center justify-center border-2 border-purple-950 transition-transform hover:-translate-y-2"
+                >
+                  <img
+                    src="/datai2i.png"
+                    alt="Client Logo"
+                    className="h-15 w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className="py-20 w-full bg-white border-t border-purple-200">
+      <section className="py-20 w-full bg-dark border-white">
         <div className="container mx-auto px-2 md:px-6">
           <div className="glass-panel p-10 md:p-16 rounded-2xl max-w-4xl mx-auto text-center border-2 border-purple-950">
-            <h2 className="text-3xl md:text-4xl font-black text-purple-950 px-4 py-2 rounded-md inline-block">
+            <h2 className="text-3xl md:text-4xl font-black text-white/70 px-4 py-2 rounded-md inline-block">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-lg text-[#2D1247] font-bold mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white font-bold mb-8 max-w-2xl mx-auto">
               Partner with us to leverage the power of AI and drive your business into the future of
               technology.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 to="/contact"
-                className="px-6 py-3 rounded-full bg-[#2D1247] text-white font-bold transition-all hover:bg-[#2D1247]/80 hover:scale-105 focus:outline-none shadow-glow animate-pulse-glow"
+                className="px-6 py-3 rounded-full glow-button bg-purple-950 hover:bg-purple-950 text-white font-bold transition-all hover:scale-105 focus:outline-none shadow-glow animate-pulse-glow"
               >
                 Contact Us Today
               </Link>
               <Link
                 to="/about"
-                className="px-6 py-3 rounded-full border-2 border-purple-950 bg-white/10 text-[#2D1247] font-bold transition-all hover:border-purple-400 hover:bg-purple-600 hover:scale-105 focus:outline-none"
+                className="px-6 py-3 rounded-full border-2 border-purple-950 bg-purple-200 text-purple-950 font-bold transition-all hover:bg-purple-300 hover:scale-105 focus:outline-none"
               >
                 About Our Team
               </Link>
